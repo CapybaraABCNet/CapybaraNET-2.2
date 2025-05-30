@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara</title>
+    <style>
+        article {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%) 
+            ) fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        } 
+
+        body {
+            background: hsl(204, 100%, 5%);
+            color: white;
+            min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
+            width: 100%; /* Изменено на width для лучшей совместимости */
+            padding: 5vmin;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif; /* Добавлен запасной шрифт */
+            font-size: min(200%, 5vmin);
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            align-items: center; /* Центрирование содержимого по горизонтали */
+        }
+        
+        .w {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%)
+            ); /* Используем тот же градиент */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        html {
+            height: 100%; /* Установлено для обеспечения полной высоты */
+            width: 100%; /* Установлено для обеспечения полной ширины */
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2rem; /* Отступ сверху для разделения */
+        }
+
+        footer a {
+            color: white; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 1rem; /* Отступы между ссылками */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cyber-image {
+            height: 250px; /* Исправлено */
+            width: 350px;  /* Исправлено */
+            border-radius: 15%;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+.section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.8);
+            
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ffcc;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        button:hover {
+            background-color: #ff00ff;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+            animation: fadeIn 3s ease-in-out infinite alternate;
+            z-index: -1; /* Фон позади содержимого */
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Capybara.NET</h1>
+        <nav>
+            <a href="index.html">Главная страница, </a>
+            <a href="project.html">О проекте, </a>
+            <a href="capybara.html">О капибарах, </a>
+            <a href="fact.html">Интересные факты, </a>
+            <a href="game.html">Игры, </a>
+            <a href="abc.html">О создателе сайта</a>
+        </nav>
+    </article>
+    <h1 class="w"> Факты о капибарах</h1>
+        <p class="w">здесь вы найдёте факты о капибарах</p>
+        <p class="w">1. Капибары без преувеличения являются самыми крупными грызунами в мире. Судите сами. Параметры этих "милашек" следующие – 1,5 м в длину и до 60 см в высоту. А вес одной особи может достигать 65 кг. Для справки – бобры могут весить 32 кг. В общем, хорошего животного должно быть много. Капибары тому отличный пример.
+
+            2. Эти ребята не могут жить без воды. Ведь это единственное место, где они могут спрятаться или спокойно отдохнуть. Этот образ жизни не мог не отразиться на внешнем виде капибар. Именно поэтому у них перепончатые лапы, а глаза, уши и ноздри расположены на макушке. Да-да, как у бегемотов. А еще капибары в случае опасности могут прятаться под водой до 5 минут.</p>
+            <div class="text-center">
+                <img src="https://stihi.ru/pics/2022/10/16/3650.jpg">
+            </div>
+        <p class="w">3. На самом деле водосвинкам много кто угрожает. Ими не прочь полакомиться анаконды, кайманы, ягуары и даже хищные птицы – гриф-урубу. Правда, последних интересуют лишь детеныши капибар.
+
+            4. "Малыши" водосвинок, к слову, не такие уж и простые жертвы. Во всяком случае капибары с детства приспособились к непростой жизни, поэтому рождаются сразу зрячими и с шерстяным покровом. Детеныши очень быстро растут и способны почти сразу после рождения есть траву и следовать за своей группой.
+            
+        </p>
+        <p class="w">5. Да, капибары предпочитают жить в больших группах – от 10 до 30 особей. Типичная "команда" водосвинок включает одного доминирующего самца. Кстати, самки растят своих детенышей вместе. Представляете, маленьких капибар выкармливают сразу нескольких матерей, а не одна.
+
+            6. Капибары – очень общительные ребята. Это неудивительно. Им же нужно как-то коммуницировать со своей "стаей": предупреждать об опасности, следить за детенышами, контролировать направление движения. Язык капибар очень богат для животного мира. Это и скрип зубов, и визг, и нытье, и свист, и плач, и щелчки, и даже лай. При этом каждый звук имеет свое значение и хорошо понятен всем членам группы.
+            
+           </p>
+        <p class="w">7. Еще один факт – многие животные "знают" о покладистом и спокойном характере капибар, поэтому используют их в собственных целях. Не подозревая о том, что водосвинки их тоже используют. Например, можно часто увидеть отдыхающих на спинах капибар птиц и обезьян. Это не просто случайность – наездники пожирают насекомых, живущих в шерсти водосвинок. Птицам и обезьянам – еда, капибарам – процедура. Полная гармония.
+
+            9. При всей своей флегматичности и кажущейся медлительности, капибара – очень быстрое животное. Представляете, они могут удирать со скоростью до 35 км/ч. Для сравнения – средняя скорость, которую развивают профессиональные бегуны, равна примерно 30-40 км/ч. Представляете, как может носиться эта водосвинка?</p>
+        <p class="w">10. Резцы капибар растут на протяжении всей жизни. Иногда они становятся слишком длинными и мешают животным нормально есть. Для того, чтоб сточить ненужное, водосвинки постоянно пускают резцы в ход. Питаются капибары, в основном, водными растениями, сеном, корой и…своими фекалиями. Никаких "фу"! Это нужно для лучшего переваривания пищи.</p>
+        <p></p>
+        <div class="text-center">
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/1865080499496933989/96D78F5187B5CD98762453350EA524B62BCBF475/">
+        </div>
+        <h1 class="w">Факты о капибарах</h1>
+        <button id="factButton" class="btn btn-primary">Получить рандомный факт</button>
+        <p id="factDisplay" class="mt-3"></p>
+        <script>
+            const facts = [
+            "Капибары - самые крупные грызуны в мире.",
+            "Капибары могут плавать и задерживать дыхание под водой до 5 минут.",
+            "Эти животные очень социальные и живут в группах до 20 особей.",
+            "Капибары травоядные и едят траву, кору и водные растения.",
+            "Они могут достигать веса до 65 кг."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara</title>
+    <style>
+        article {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%) 
+            ) fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        } 
+
+        body {
+            background: hsl(204, 100%, 5%);
+            color: white;
+            min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
+            width: 100%; /* Изменено на width для лучшей совместимости */
+            padding: 5vmin;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif; /* Добавлен запасной шрифт */
+            font-size: min(200%, 5vmin);
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            align-items: center; /* Центрирование содержимого по горизонтали */
+        }
+        
+        .w {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%)
+            ); /* Используем тот же градиент */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        html {
+            height: 100%; /* Установлено для обеспечения полной высоты */
+            width: 100%; /* Установлено для обеспечения полной ширины */
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2rem; /* Отступ сверху для разделения */
+        }
+
+        footer a {
+            color: white; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 1rem; /* Отступы между ссылками */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cyber-image {
+            height: 250px; /* Исправлено */
+            width: 350px;  /* Исправлено */
+            border-radius: 15%;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+.section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.8);
+            
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ffcc;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        button:hover {
+            background-color: #ff00ff;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+            animation: fadeIn 3s ease-in-out infinite alternate;
+            z-index: -1; /* Фон позади содержимого */
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Capybara.NET</h1>
+        <nav>
+            <a href="index.html">Главная страница, </a>
+            <a href="project.html">О проекте, </a>
+            <a href="capybara.html">О капибарах, </a>
+            <a href="fact.html">Интересные факты, </a>
+            <a href="game.html">Игры, </a>
+            <a href="abc.html">О создателе сайта</a>
+        </nav>
+    </article>
+    <h1 class="w">О Капибарах</h1>
+    <p class="w">о капибарах</p>
+    <p class="w">Капибара, или как ее еще называют, водосвинка – это полуводное животное, которое является представителем отряда Грызунов. Это очень необычное животное и многим будет интересно познакомится с ним. Животное капибара – это самый большой грызун. Ниже Вы найдете описание и фото животного капибара, а также узнаете много нового нем.</p>
+    <img src="https://avatars.dzeninfra.ru/get-zen_doc/1945976/pub_5e4293afb83d707e09fb317f_5e4299d805b6250431bb66b7/scale_1200" class="w" height="250" width="400">
+    <img src="https://mirbelogorya.ru/images/kapibara.jpg" class="w" height="250" width="400">
+    <img src="https://avatars.dzeninfra.ru/get-zen_doc/52716/pub_64e0df5ec372f41f801f2368_64e50b34bdc64850caa6ab98/scale_1200" class="w" height="250" width="400">
+    <p class="w">Длина тела капибары составляет от 1 до 1,3 метра, при высоте в холке от 50 до 60 см. Самки крупнее самцов. Самцы имеют на морде много крупных сальных желез. Животное капибара весит в пределах от 34 до 65 кг. Капибара выглядит необычно. Водосвинка имеет короткие лапы, на пальцах которых есть небольшие плавательные перепонки, что позволяет грызуну хорошо плавать. Также водосвинка имеет 20 острых зубов. Животное капибара очень любит воду, обожает купаться и нырять.</p>
+    <img src="https://animaljournal.ru/articles/wild/grizuni/kapibara/kapibara_foto1.jpg" class="w" height="250" width="400">
+    <img src="https://aif-s3.aif.ru/images/037/894/59bc467319db6d84afd548c5876b7582.webp" class="w" height="250" width="400">
+    <img src="https://steamuserimages-a.akamaihd.net/ugc/2012577143839260562/18BF3DE8C603B4A156198FCAF5FC755117524B9A/?imw=512&amp;imh=341&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" class="w" height="250" width="400">
+    <p class="w">Капибара выглядит достаточно пушистой, ведь ее тело покрыто длинными жесткими волосами, но не имеет подшерстка. Окрас капибары варьируется от коричнево-рыжего до сероватого. Нижняя часть тела животного капибара обычно имеет коричнево-желтоватый оттенок. Молодые особи окрашены светлее взрослых. Капибара очень милое и забавное животное, которое имеет спокойный и добродушный характер.</p>
+    <img src="https://avatars.mds.yandex.net/get-altay/1058733/2a00000188192bb9e1b19b4f6a381901b979/XXXL" class="w" height="250" width="400">
+    <img src="https://zooofoto.ru/foto/925/kapibary_foto_bokom_5.webp" class="w" height="250" width="400">
+    <img src="https://avatars.dzeninfra.ru/get-zen_doc/229502/pub_5a1fdbd900b3dd839559e487_5a1ff61600b3dd839559e4b8/scale_1200" class="w" height="250" width="400">
+    <p class="w">Капибара встречается на территории следующих стран: Колумбия, Перу, Парагвай, Уругвай, Гайана, Боливия, Венесуэла, Бразилия, Аргентина и Французская Гвиана. Капибара обитает в бассейнах таких рек, как: Амазонка, Ориноко и Ла-Плата. Грызун капибара избегает водоемов на возвышенности и обычно селится на высоте не более 1 км над уровнем моря.</p>
+    <img src="https://cs9.pikabu.ru/post_img/2020/09/18/6/og_og_1600420669258541911.jpg" class="w" height="250" width="400">
+    <img src="https://i.pinimg.com/736x/c5/ad/ca/c5adca38b3ed97e5ff2b4c8a2dd5d63c--miao-birds.jpg" class="w" height="250" width="400">
+    <img src="https://i.pinimg.com/originals/16/c0/4d/16c04d04de7d349b13c59650c4cdee71.jpg" class="w" height="250" width="400">
+    <p class="w">Индейцы называют животное капибара «хозяином трав», так как этот грызун является травоядным. Своими острыми зубами, водосвинка словно бритвой срезает траву. Капибара ест плоды и клубни растений. Кроме этого капибара ест сено и различные водные растения.</p>
+    <img src="https://i.pinimg.com/originals/d4/5d/0e/d45d0eaf915880a42f7e0e0ff56620dc.jpg" class="w" height="250" width="400">
+    <img src="https://i.pinimg.com/originals/a8/b9/d4/a8b9d404d4fdd91323eff4020ce74414.jpg" class="w" height="250" width="400">
+    <img src="https://sun9-6.userapi.com/impg/Ku3YOeKoPcx8rBAEHo4Xqb3hsj4xZGNzIaid9A/8PzymAr59sc.jpg?size=1280x720&quality=96&sign=b558d35f2a1df253613921ca1e79bb5f&c_uniq_tag=l5CeqVPzpCrnZQb8jhLLx6dLzGnMIvD7OF2DjCpqQJE&type=album" class="w" height="250" width="400">
+    <p class="w">Капибара живет, проявляя активность в дневное время суток и ведет полуводный образ жизни. В некоторых случаях водосвинка может перейти и на ночной образ жизни. Капибара живет у воды, поэтому не удаляется от берегов водоема более, чем на 1 км.</p>
+    <img src="https://i.pinimg.com/originals/89/30/e3/8930e37f258573289ca8b1ed77e05dd9.jpg" class="rounded" height="250" width="400">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Yellow-headed_caracara_%28Milvago_chimachima%29_on_capybara_%28Hydrochoeris_hydrochaeris%29.JPG/1000px-Yellow-headed_caracara_%28Milvago_chimachima%29_on_capybara_%28Hydrochoeris_hydrochaeris%29.JPG" class="w" height="250" width="400">
+    <img src="https://sun9-58.userapi.com/impg/-bCXppVb1JqNp1bEv3spv4uTYMkZRiTJu6gEhA/AOg7Jxupem8.jpg?size=876x719&quality=95&sign=9bfe046d9e2cd62265e51645b3b0b13d&c_uniq_tag=YLivtRj6qPAN_TIlXRT4TR1k-yt5K5Gd_N5WV3fdAzY&type=album" class="w" height="250" width="400">
+    <p class="w">Вся жизнь капибары связана с колебаниями уровня воды. В сезоны дождей водосвинки разбредаются по территории, а в сухой сезон они собираются по берегам рек и водоемов. Животное капибара может преодолевать достаточно большие расстояния в поисках воды и еды. Грызун капибара отлично плавает и ныряет, при этом в воде чувствуя себя уверенней, чем на суше. Высоко расположенные глаза, уши и ноздри, позволяют водосвинке во время плавания держать их над водой.</p>
+    <img src="https://photos.willbl.com/wp-content/uploads/WBL-Pantanal-Capybara-090831151335.jpg" class="w" height="250" width="400">
+    <img src="https://avatars.mds.yandex.net/get-mpic/2017233/img_id7382812028490792524.jpeg/orig" class="w" height="250" width="400">
+    <img src="https://static.tildacdn.com/tild3438-6330-4036-b937-643537616462/_2023-11-04_17180019.png" class="w" height="250" width="400">
+    <p class="w">Грызун капибара является социальным животным и имеет свою иерархию. Капибары живут в группах, которые состоят из 10-20 особей. Лидером в таких группах является доминантный самец. Также в группе имеется несколько самок (у них собственная внутренняя иерархия), детеныши и подчиненные самцы. Изредка капибары живут в одиночку, да и то лишь самцы. Нередко случается, что доминантный самец изгоняет из группы других самцов, чтобы избежать конкуренции.</p>
+    <img src="https://www.nj.com/resizer/YJXP-xyIzmmLffIJOSjURRNTv_g=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/NYK7MRFVJBEYJKDWZQMI3OFV5I.JPG" class="w" height="250" width="400">
+    <img src="https://petstime.ru/wp-content/uploads/2023/04/word-image-13637-3.jpeg" class="w" height="250" width="400">
+    <img src="https://i.postimg.cc/3N68ny1f/image.jpg" class="w" height="250" width="400">
+    <p class="w">Альбиносы-капибары — редкие животные, у которых отсутствует пигмент меланин в шерсти, коже и глазах. Из-за этого у них характерный белый мех и красные или розовые глаза.</p>
+    <div class="text-center">
+        <img src="https://sun9-64.userapi.com/impg/PTt9RmFDZWP568wQR6vfKjWRph1uouvIxavSeA/sco6Y8uj4h8.jpg?size=640x584&quality=96&sign=78e7e13af8568d0697d092e70125de58&c_uniq_tag=15JnSsDvxQnMbWXIb6z97BMtDq8uKjn_fycC_8NsQIE&type=album">
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara</title>
+    <style>
+        article {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%) 
+            ) fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        } 
+
+        body {
+            background: hsl(204, 100%, 5%);
+            color: white;
+            min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
+            width: 100%; /* Изменено на width для лучшей совместимости */
+            padding: 5vmin;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif; /* Добавлен запасной шрифт */
+            font-size: min(200%, 5vmin);
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            align-items: center; /* Центрирование содержимого по горизонтали */
+        }
+        
+        .w {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%)
+            ); /* Используем тот же градиент */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        html {
+            height: 100%; /* Установлено для обеспечения полной высоты */
+            width: 100%; /* Установлено для обеспечения полной ширины */
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2rem; /* Отступ сверху для разделения */
+        }
+
+        footer a {
+            color: white; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 1rem; /* Отступы между ссылками */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cyber-image {
+            height: 250px; /* Исправлено */
+            width: 350px;  /* Исправлено */
+            border-radius: 15%;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+.section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.8);
+            
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ffcc;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        button:hover {
+            background-color: #ff00ff;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+            animation: fadeIn 3s ease-in-out infinite alternate;
+            z-index: -1; /* Фон позади содержимого */
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Capybara.NET</h1>
+        <nav>
+            <a href="index.html">Главная страница, </a>
+            <a href="project.html">О проекте, </a>
+            <a href="capybara.html">О капибарах, </a>
+            <a href="fact.html">Интересные факты, </a>
+            <a href="game.html">Игры, </a>
+            <a href="abc.html">О создателе сайта</a>
+        </nav>
+    </article>
+    <h1 class="w">О проекте</h1>
+        <p class="w">Проект о капибарах</p>
+        <p class="w">Этот проект посвящён капибарам, цель проекта-ознакомить людей с капибарами, в группе сайтов CapybaraNET есть сайт с играми и т.д, также это сайт тоже развлекательный, вы тут можете хорошо провести время. Приятного посещения сайта!</p>
+        <div class="text-center">
+            <img src="https://sun9-18.userapi.com/impg/fV_wic62vCp1rGeouM_g63O2AUh3KYplbI0EJg/OZxBIdkhQ0o.jpg?size=1024x700&quality=95&sign=24a04e814316af6fe853e6bcd8621e63&c_uniq_tag=sI8K5AvZ3-JZ8PzppR9Qi6pDuAV1KCyz8-UzqCbuDjQ&type=album" class="w" height="250" width="250">
+            <img src="https://i.pinimg.com/736x/11/1d/88/111d88ffca5291f0beff4c40e89a314c.jpg" class="w" height="250" width="250">
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/1865080499496942607/A259B7BDB4C832341677F23FA2FCDEF4E99517BB/" class="w" height="250" width="250">
+            <img src="https://i.pinimg.com/736x/71/81/0f/71810fcad750ad354c55462d808c0c6f.jpg" class="w" height="250" width="250">
+            <img src="https://sneg.top/uploads/posts/2023-06/1688050925_sneg-top-p-kapibara-avatarka-vkontakte-8.jpg" class="w" height="250" width="250">
+        </div>
+</body>
+</html>

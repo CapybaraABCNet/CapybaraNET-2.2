@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara</title>
+    <style>
+        
+        article {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%) 
+            ) fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        } 
+
+        body {
+            background: hsl(204, 100%, 5%);
+            color: rgb(0, 0, 0);
+            min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
+            width: 100%; /* Изменено на width для лучшей совместимости */
+            padding: 5vmin;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif; /* Добавлен запасной шрифт */
+            font-size: min(200%, 5vmin);
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            align-items: center; /* Центрирование содержимого по горизонтали */
+        }
+        
+        .w {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%)
+            ); /* Используем тот же градиент */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        html {
+            height: 100%; /* Установлено для обеспечения полной высоты */
+            width: 100%; /* Установлено для обеспечения полной ширины */
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2rem; /* Отступ сверху для разделения */
+        }
+
+        footer a {
+            color: white; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 1rem; /* Отступы между ссылками */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cyber-image {
+            height: 250px; /* Исправлено */
+            width: 350px;  /* Исправлено */
+            border-radius: 15%;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+.section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.8);
+            
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+    margin: 10px;
+    padding: 10px 20px; /* Уберите это, если хотите использовать padding: 20px; ниже */
+    font-size: 1.2em;
+    border: none;
+    border-radius: 15px; /* Сглаженные углы */
+    background-color: #00ffcc;
+    color: rgb(255, 255, 255); /* Цвет текста кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: appear 2s forwards;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+button:hover {
+    background-color: #ff00ff;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+    animation: fadeIn 3s ease-in-out infinite alternate;
+    z-index: -1; /* Фон позади содержимого */
+}
+.question {
+            margin: 20px 0;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            background-color: #1e1e1e;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options li:hover {
+            background-color: #333333;
+        }
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Capybara.NET</h1>
+        <nav>
+            <a href="index.html">Главная страница, </a>
+            <a href="project.html">О проекте, </a>
+            <a href="capybara.html">О капибарах, </a>
+            <a href="fact.html">Интересные факты, </a>
+            <a href="game.html">Игры, </a>
+            <a href="abc.html">О создателе сайта</a>
+        </nav>
+    </article>
+
+    <h1 class="w">Game capybara</h1>
+    <p class="w">тут есть Игры</p>
+    <h3 class="w">Quiz</h3>
+    <div id="quiz">
+    <div class="question" id="question"></div>
+    <ul class="options" id="options"></ul>
+</div>
+
+<div class="result" id="result"></div>
+     <h1 class="w">Капибара Кликер</h1>
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/2035104565156933841/5B00943B2DB5822EC081155D866584D38140F0F0/" class="rounded" height="250" width="250">
+            <div id="capybara-count" class="w">Капибар коинов: 0</div>
+            <button id="click-button"  type="button" class="btn btn-outline-primary">Кликни на капибару!</button>
+            <div id="upgrade-section">
+                <button id="upgrade-button" type="button" class="btn btn-outline-success">Улучшить (100 капибар)</button>
+            </div>
+<h1>Случайное изображение капибары</h1>
+<img id="randomImage" src="" alt="Случайное изображение" />
+<button onclick="showRandomImage()">Показать случайное изображение</button>
+    <script>
+        const questions = [
+        {
+            question: "Правда ли то что капибары самые большие грызуны?",
+            options: ["Да", "Нет"],
+            answer: "Да"
+        },
+        {
+            question: "Чем питаются капибары?",
+            options: ["Мясом", "Ягодами", "Травой", "Овощами"],
+            answer: "Травой"
+        },
+        {
+            question: "Капибары Дружелюбные существа?",
+            options: ["Да", "Нет"],
+            answer: "Да"
+        },
+        {
+            question: "В скольких группах живут капибары?",
+            options: ["15-20", "50-75", "2-5", "10-15"],
+            answer: "15-20"
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function loadQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        document.getElementById("question").innerText = currentQuestion.question;
+        const optionsList = document.getElementById("options");
+        optionsList.innerHTML = "";
+        currentQuestion.options.forEach(option => {
+            const li = document.createElement("li");
+            li.innerText = option;
+            li.addEventListener("click", () => selectOption(option));
+            optionsList.appendChild(li);
+        });
+    }
+
+    function selectOption(selectedOption) {
+        const currentQuestion = questions[currentQuestionIndex];
+        if (selectedOption === currentQuestion.answer) {
+            score++;
+        }
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerText = "Вы ответили правильно на ${score}, из ${questions.length} вопросов.";
+        resultDiv.style.display = "block";
+        document.getElementById("quiz").style.display = "none";
+    }
+
+    loadQuestion();
+     let capybaraCount = 0;
+let upgradeCost = 100;
+let clickValue = 1;
+
+const capybaraCountDisplay = document.getElementById('capybara-count');
+const clickButton = document.getElementById('click-button');
+const upgradeButton = document.getElementById('upgrade-button');
+
+clickButton.addEventListener('click', () => {
+    capybaraCount += clickValue;
+    capybaraCountDisplay.textContent = `Капибар: ${capybaraCount}`;
+});
+
+upgradeButton.addEventListener('click', () => {
+    if (capybaraCount >= upgradeCost) {
+        capybaraCount -= upgradeCost;
+        clickValue += 1; // Увеличиваем значение клика
+        upgradeCost = Math.floor(upgradeCost * 1.5); // Увеличиваем стоимость улучшения
+        capybaraCountDisplay.textContent = `Капибар: ${capybaraCount}`;
+        upgradeButton.textContent = `Улучшить (${upgradeCost} капибар)`;
+    } else {
+        alert('Недостаточно капибар для улучшения!');
+    }
+});
+const image = [
+    'https://sun9-19.userapi.com/impf/_cmn9TzLvip-jGBpKiYVtcAk6jvhMoYH0PlXWw/2tgvGj36U10.jpg?size=1920x768&quality=95&crop=0,0,1920,767&sign=de3f200213493a7ed6a25fb211d4df01&type=cover_group',
+    'https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24470208/1246039762.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.658825623304%2C100%2C78.682348753393&amp;w=1200',
+    'https://go.zvuk.com/imgs/2023/06/13/17/5939908/2efcc9a07dffcc005b1dbbd4adbc4f92a3bbdc68.jpg',
+    'https://i.pinimg.com/736x/6a/1f/48/6a1f4844b3308429e7fbd3a10f4d6070.jpg',
+    'https://avatars.mds.yandex.net/i?id=91fcb5a0917a461084028335b54374c2_l-9044089-images-thumbs&n=13',
+    'https://avatars.mds.yandex.net/i?id=908a8ba75eff626e00bdd28a16fc7c5a_l-5372356-images-thumbs&n=13'
+];
+function showRandomImage() {
+    const randomIndex = Math.floor(Math.random() * image.length);
+    const randomImageUrl =  images[randomIndex];
+    document.getElementById('randomImage').src = randomImageUrl;
+}
+    </script>
+</body>
+</html>

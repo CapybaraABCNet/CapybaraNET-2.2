@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara</title>
+    <style>
+        article {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%) 
+            ) fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        } 
+
+        body {
+            background: hsl(204, 100%, 5%);
+            color: white;
+            min-height: 100vh; /* Изменено на min-height для лучшей совместимости */
+            width: 100%; /* Изменено на width для лучшей совместимости */
+            padding: 5vmin;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif; /* Добавлен запасной шрифт */
+            font-size: min(200%, 5vmin);
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            align-items: center; /* Центрирование содержимого по горизонтали */
+        }
+        
+        .w {
+            background: radial-gradient(
+                hsl(100, 100%, 60%), 
+                hsl(200, 100%, 60%)
+            ); /* Используем тот же градиент */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        html {
+            height: 100%; /* Установлено для обеспечения полной высоты */
+            width: 100%; /* Установлено для обеспечения полной ширины */
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 2rem; /* Отступ сверху для разделения */
+        }
+
+        footer a {
+            color: white; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 1rem; /* Отступы между ссылками */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cyber-image {
+            height: 250px; /* Исправлено */
+            width: 350px;  /* Исправлено */
+            border-radius: 15%;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+.section {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(34, 34, 34, 0.8);
+            
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ffcc;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 15px; /* Сглаженные углы */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: appear 2s forwards;
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        button:hover {
+            background-color: #ff00ff;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+            animation: fadeIn 3s ease-in-out infinite alternate;
+            z-index: -1; /* Фон позади содержимого */
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Capybara.NET</h1>
+        <nav>
+            <a href="index.html">Главная страница, </a>
+            <a href="project.html">О проекте, </a>
+            <a href="capybara.html">О капибарах, </a>
+            <a href="fact.html">Интересные факты, </a>
+            <a href="game.html">Игры, </a>
+            <a href="abc.html">О создателе сайта</a>
+        </nav>
+    </article>
+    <h3 class="w">Добро пожаловать на сайт о капибарах!</h3>
+    <div class="text-center">
+        <img src="https://avatars.mds.yandex.net/i?id=93bc994d2fda34deccaa7e02511abc2f_l-4984238-images-thumbs&n=13" class="cyber-image">
+    </div>
+    <p class="w">Здесь вы найдете много интересной информации о капибарах.</p>
+    <p class="w">Капибара – это грызун, обитающий в Латинской Америке, на берегах рек, озер или других водоемов. Это животное ведет полуводный образ жизни и питается растениями. Капибары очень дружелюбны и коммуникабельны, они живут в группах до 100 особей и общаются с другими животными. На этом сайте вы побольше узнаете о них.</p>
+    <div class="text-center">
+        <img src="https://i0.wp.com/animals.pibig.info/uploads/posts/2023-09/1695757149_animals-pibig-info-p-kapibara-v-pustine-oboi-85.jpg?ssl=1" class="cyber-image">
+    </div>
+        <div class="section" id="section1">
+        <h2>Кто такая капибара?</h2>
+        <p>Капибара — это крупнейший грызун в мире. Они обитают в тропических и субтропических регионах Южной Америки.</p>
+    </div>
+
+    <div class="section" id="section2">
+        <h2>Среда обитания</h2>
+        <p>Капибары предпочитают жить вблизи водоемов, таких как реки и озера. Они отличные пловцы и могут оставаться под водой до пяти минут.</p>
+    </div>
+
+    <div class="section" id="section3">
+        <h2>Интересные факты</h2>
+        <p>Капибары — социальные животные и обычно живут в группах от 10 до 20 особей. Они очень дружелюбны и могут ладить с другими видами животных.</p>
+    </div>
+
+    <button id="prevButton">Назад</button>
+    <button id="nextButton">Вперед</button>
+
+
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        let currentSection = 0;
+
+        function showSection(index) {
+            sections.forEach((section, i) => {
+                section.style.display = (i === index) ? 'block' : 'none';
+                if (i === index) {
+                    section.style.opacity = '1';
+                } else {
+                    section.style.opacity = '0';
+                }
+            });
+        }
+
+        document.getElementById('prevButton').addEventListener('click', () => {
+            if (currentSection > 0) {
+                currentSection--;
+                showSection(currentSection);
+            }
+
+        });
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            if (currentSection < sections.length - 1) {
+                currentSection++;
+                showSection(currentSection);
+            }
+        });
+
+        // Инициализация
+        showSection(currentSection);
+    </script>
+</body>
+</html>
